@@ -1,40 +1,94 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
 body {
-    background-color: #02c3af81;
     font-family: Arial, sans-serif;
+    background-color: #02c3af81; /* Semi-transparent teal */
     max-width: 900px;
     margin: 20px auto;
-    padding: 10px;
+    padding: 10px 20px;
     line-height: 1.6;
-}
-
-.title {
-    font-size: 2em;
     color: #333;
-    text-align: center;
-    margin-top: 20px;
 }
 
-.methods {
-    font-size: 1em;
-    color: #555;
+/* Container style (if using .container) */
+.container {
+    background-color: #ffffff;
+    max-width: 600px;
+    width: 100%;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     text-align: center;
+    margin: 0 auto 40px;
+}
+
+/* Headings */
+h1, .title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+h2, .heading1 {
+    font-size: 1.8rem;
+    color: #34495e;
     margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+p, .methods {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 .choices {
-    font-size: 1em;
+    font-size: 1rem;
     color: #ff0000;
     text-align: center;
     margin-top: 20px;
 }
 
-/* Remove bullets from the <ul> inside .choices */
+/* Remove bullets from <ul> inside .choices */
 .choices ul {
     list-style-type: none;
     padding-left: 0;
     margin-left: 0;
 }
 
+/* Links/buttons */
+.path-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.path-link {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #2980b9;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.path-link:hover {
+    background-color: #1c5980;
+}
+
+/* Toggle button */
 .toggle-button {
     cursor: pointer;
     background-color: #f0f0f0;
@@ -45,6 +99,7 @@ body {
     text-align: left;
 }
 
+/* Collapsible content */
 .content {
     display: none;
     padding: 10px;
@@ -53,26 +108,20 @@ body {
     margin-top: 5px;
 }
 
-/* Better to rename from .h1 to .heading1 or just style h1 */
-.heading1 {
-    font-size: 1.5em;
-    color: #333;
-    text-align: left;
-    margin-top: 20px;
-}
-
+/* Details and summary styling */
 details {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     padding: 12px 16px;
     border-radius: 6px;
-    width: 600px;
+    max-width: 600px;
+    margin: 10px auto 20px auto;
     font-family: Arial, sans-serif;
-    margin: 10px 0 20px 0;
 }
 
 details details {
-    width: 500px;
+    max-width: 500px;
+    margin-left: 20px;
 }
 
 summary {
